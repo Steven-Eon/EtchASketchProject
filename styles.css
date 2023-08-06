@@ -9,7 +9,12 @@
 }
 
 .gridElement {
+    background-color: white;
     padding: 10px;
     border-width: 1px;
     border-style: solid;
+}
+
+.gridElementHover {
+    background-color: black;
 }

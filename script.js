@@ -1,6 +1,5 @@
 function initializeGrid() {
     const sketchGrid = document.querySelector(".flexColumn, sketchContainer");
-    console.log(sketchGrid);
     const gridRow = document.createElement('div');
     const gridElement = document.createElement('div');
 
@@ -15,6 +14,16 @@ function initializeGrid() {
     {
         sketchGrid.appendChild(gridRow.cloneNode(true));
     }
+
+    const nodeList = document.querySelectorAll("div .gridElement");
+
+    nodeList.forEach((node) => {
+        node.addEventListener("mouseover", () => {
+            node.classList.toggle("gridElementHover")
+        });
+    })
+
+
 }
 
 initializeGrid();
