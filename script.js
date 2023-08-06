@@ -3,7 +3,7 @@ function initializeGrid(sizeX, sizeY) {
     const gridRow = document.createElement('div');
     const gridElement = document.createElement('div');
 
-    gridRow.classList.toggle("flexRow");
+    // gridRow.classList.toggle("flexColumn");
     gridElement.classList.toggle("gridElement");
 
     for (let i = 0; i < sizeY; ++i)

@@ -8,11 +8,25 @@
     flex-direction: row;
 }
 
-.gridElement {
-    background-color: white;
-    padding: 10px;
+.sketchContainer {
+    height: 30vw;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5vw;
     border-width: 1px;
     border-style: solid;
+    border-color: black;
+}
+
+.sketchContainer * {
+    flex: auto;
+}
+
+.gridElement {
+    aspect-ratio: 1 / 1;
+    min-width: 0;
 }
 
 .gridElementHover {
