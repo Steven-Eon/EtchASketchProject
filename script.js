@@ -5,6 +5,7 @@ function initializeGrid(sizeX, sizeY) {
 
     // gridRow.classList.toggle("flexColumn");
     gridElement.classList.toggle("gridElement");
+    gridRow.classList.toggle("gridRowContainer");
 
     for (let i = 0; i < sizeY; ++i)
     {
@@ -15,14 +16,14 @@ function initializeGrid(sizeX, sizeY) {
         sketchGrid.appendChild(gridRow.cloneNode(true));
     }
 
-    const nodeList = document.querySelectorAll("div .gridElement");
+    const nodeList = document.querySelectorAll("div .gridRowContainer");
 
     nodeList.forEach((node) => {
         node.addEventListener("mouseover", (event) => {
             console.log(event.buttons);
             if (event.buttons === 1)
             {
-                node.classList.add("gridElementHover");
+                event.target.classList.add("gridElementHover");
             }   
         });
     })
