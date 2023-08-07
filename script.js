@@ -20,8 +20,8 @@ function initializeGrid(sizeX, sizeY) {
 
     nodeList.forEach((node) => {
         node.addEventListener("mouseover", (event) => {
-            console.log(event.buttons);
-            if (event.buttons === 1)
+            const target = event.target;
+            if (target.matches(".gridElement") && event.buttons === 1)
             {
                 event.target.classList.add("gridElementHover");
             }   
