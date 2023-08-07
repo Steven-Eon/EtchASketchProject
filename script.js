@@ -26,6 +26,10 @@ function initializeGrid(sizeX, sizeY) {
                 event.target.classList.add("gridElementHover");
             }   
         });
+
+        node.addEventListener("dragstart", (event) => {
+            event.preventDefault();
+        });
     })
 }
 
