@@ -18,31 +18,25 @@ function initializeGrid(sizeX, sizeY) {
     const nodeList = document.querySelectorAll("div .gridElement");
 
     nodeList.forEach((node) => {
-        node.addEventListener("mouseover", () => {
-            node.classList.add("gridElementHover")
-        });
-
-        node.addEventListener("mouseout", () => {
-            node.classList.remove("gridElementHover");
+        node.addEventListener("mouseover", (event) => {
+            console.log(event.buttons);
+            if (event.buttons === 1)
+            {
+                node.classList.add("gridElementHover");
+            }   
         });
     })
 }
 
 function promptSize() {
-    let sizeX = prompt("Specify desired size of X-axis (Limit: 100)");
-    while (sizeX < 1 || sizeX > 100)
+    let size = prompt("Specify desired size of grid. (Limit: 100 (100x100))");
+    while (size < 1 || size > 100)
     {
-        sizeX = prompt("Invalid input, please try again.");
-    }
-
-    let sizeY = prompt("Specify desired size of Y-axis (Limit: 100)");
-    while (sizeY < 1 || sizeY > 100)
-    {
-        sizeY = prompt("Invalid input, please try again.");
+        size = prompt("Invalid input, please try again.");
     }
 
     clearGrid();
-    initializeGrid(sizeX, sizeY);
+    initializeGrid(size, size);
 
 
 }
